@@ -7,6 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Cookie Banner -->
+  <div id="cookieBanner" class="cookie-banner" style="display:none">
+    <p>Ce site utilise des cookies pour améliorer l’expérience utilisateur.</p>
+    <div class="cookie-actions">
+      <button id="cookieAccept" class="btn small">Accepter</button>
+      <button id="cookieDecline" class="btn small outline">Refuser</button>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="index.html">StudEng Forum</a>
@@ -33,28 +42,85 @@
       </div>
     </section>
 
-    <section class="features">
-      <article class="card">
-        <h3>Q&A Boards</h3>
-        <p>Discussion boards split by discipline: Mechanical, Electrical, Civil, Software and more — inspired by Eng-Tips' structure.</p>
+    <!-- ===== REPLACED FEATURES WITH EXAMPLE POSTS ===== -->
+
+    <!-- ===== Q&A EXAMPLES (inspiré Eng-Tips) ===== -->
+    <section class="qa-section">
+      <h2>Questions & Réponses (Q&A)</h2>
+
+      <article class="post card">
+        <h3>Calcul de la contrainte maximale d'une poutre</h3>
+        <p class="meta">Posté par <strong>Hassan</strong> · Mécanique</p>
+        <p><strong>Question :</strong> Comment définir la contrainte maximale sur une poutre simplement appuyée avec charge centrale ?</p>
+        <p><strong>Réponse :</strong> Utiliser la formule 
+          <code>σmax = Mmax * c / I</code> avec 
+          <code>Mmax = P * L / 4</code>.
+        </p>
       </article>
-      <article class="card">
-        <h3>Exam & Career</h3>
-        <p>Study groups and exam tips, like EngineerBoards for FE/PE-style preparation and sharing study resources.</p>
+
+      <article class="post card">
+        <h3>Moteur pas à pas 28BYJ-48 qui vibre</h3>
+        <p class="meta">Posté par <strong>Sarah</strong> · Électronique</p>
+        <p><strong>Question :</strong> Le moteur vibre mais ne tourne pas ; quelle est la cause possible ?</p>
+        <p><strong>Réponse :</strong> Mauvaise séquence de bobines. Utiliser :  
+          <code>A → AB → B → BC → C → CD → D → DA</code>.
+        </p>
       </article>
-      <article class="card">
-        <h3>Theory & Research</h3>
-        <p>Deeper conceptual threads and tutoring, taking cues from Physics Forums for clear, well-reasoned answers.</p>
+
+      <article class="post card">
+        <h3>Différence convection naturelle / forcée</h3>
+        <p class="meta">Posté par <strong>Mehdi</strong> · Thermique</p>
+        <p><strong>Réponse :</strong> Naturelle = flottabilité ; Forcée = ventilateur/pompe.</p>
       </article>
     </section>
 
-    <section class="latest">
-      <h2>Latest discussions (mock)</h2>
-      <ul class="thread-list">
-        <li><strong>How to size a cantilever beam for fatigue?</strong> — Mechanical</li>
-        <li><strong>Best resources for FE electrical section?</strong> — Electrical</li>
-        <li><strong>Debugging Arduino I2C intermittent errors</strong> — Embedded</li>
-      </ul>
+    <!-- ===== EXAM & CAREER EXAMPLES ===== -->
+    <section class="exam-section">
+      <h2>Examens & Carrières</h2>
+
+      <article class="post card">
+        <h3>Préparation FE (Fundamentals of Engineering)</h3>
+        <p class="meta">Posté par <strong>Amine</strong> · Carrière</p>
+        <p><strong>Ressources :</strong> Engineering Reference Handbook, practice exams NCEES.</p>
+        <p><strong>Conseil :</strong> 1h/jour : Maths, Statics, Dynamics, Electric Circuits.</p>
+      </article>
+
+      <article class="post card">
+        <h3>Conseils pour le CNC Maroc (PSI / MP)</h3>
+        <p class="meta">Posté par <strong>Yassine</strong> · Examens</p>
+        <p><strong>Modules fréquents :</strong> Électrocinétique, mécanique du point, thermodynamique.</p>
+        <p><strong>Conseil :</strong> Refaire les sujets 2010–2024 pour maîtriser les modèles.</p>
+      </article>
+
+      <article class="post card">
+        <h3>Devenir ingénieur structure</h3>
+        <p class="meta">Posté par <strong>Omar</strong> · Carrière</p>
+        <p><strong>Logiciels :</strong> SAP2000, Robot Structural Analysis.</p>
+        <p><strong>Compétences :</strong> Eurocodes, charges sismiques, dimensionnement.</p>
+      </article>
+    </section>
+
+    <!-- ===== THEORY & RESEARCH EXAMPLES ===== -->
+    <section class="theory-section">
+      <h2>Théorie & Recherche</h2>
+
+      <article class="post card">
+        <h3>Introduction à l'analyse modale</h3>
+        <p class="meta">Posté par <strong>Karim</strong> · Recherche</p>
+        <p>L’analyse modale identifie les fréquences propres et modes de vibration pour éviter les résonances.</p>
+      </article>
+
+      <article class="post card">
+        <h3>Micro-stepping dans les moteurs pas à pas</h3>
+        <p class="meta">Posté par <strong>Nadia</strong> · Électromécanique</p>
+        <p>Le micro-stepping (1/8 → 1/32) réduit les vibrations et améliore la résolution angulaire.</p>
+      </article>
+
+      <article class="post card">
+        <h3>Algorithme MPPT pour panneaux photovoltaïques</h3>
+        <p class="meta">Posté par <strong>Reda</strong> · Énergie</p>
+        <p>Le MPPT Perturb & Observe maximise la puissance d’un panneau selon l’irradiance.</p>
+      </article>
     </section>
   </main>
 

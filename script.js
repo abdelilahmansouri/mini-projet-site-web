@@ -195,3 +195,32 @@ function restoreNameEmailFromCookie() {
     if (e) e.value = email;
   }
 }
+/* ----------------------------------------------------
+   Cookie Banner UI — Accept / Decline
+---------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+  const banner = document.getElementById('cookieBanner');
+  if (!banner) return;
+
+  const consent = getCookie('studeng_cookie_consent');
+
+  // Si pas encore choisi → afficher bannière
+  if (!consent) banner.style.display = "flex";
+
+  const btnAccept = document.getElementById('cookieAccept');
+  const btnDecline = document.getElementById('cookieDecline');
+
+  btnAccept.addEventListener('click', () => {
+    setCookie("studeng_cookie_consent", "accepted", 180);
+    banner.style.display = "none";
+  });
+
+  btnDecline.addEventListener('click', () => {
+    setCookie("studeng_cookie_consent", "declined", 180);
+    banner.style.display = "none";
+
+    // Effacer les cookies utilisateur (nom & email)
+    eraseCookie('studeng_name');
+    eraseCookie('studeng_email');
+  });
+});
