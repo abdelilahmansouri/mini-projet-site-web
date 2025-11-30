@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bonus Features — StudEng Forum</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">StudEng Forum</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Join / Contact</a>
+        <a href="team.html">Team</a>
+        <a href="bonus.html">Bonus</a>
+      </nav>
+      <div class="controls">
+        <button id="themeToggle5" class="btn small">Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Bonus Features Demo</h1>
+    <section>
+      <h2>Dark/Light mode</h2>
+      <p>Toggle uses <code>classList.toggle('dark')</code> on the body element.</p>
+    </section>
+
+    <section>
+      <h2>Photo preview (FileReader)</h2>
+      <p>Go to the Join page and pick a JPG to see the preview.</p>
+    </section>
+
+    <section>
+      <h2>Cookies</h2>
+      <p>After a successful submit the site stores your name & email in cookies for 7 days. Reset button clears them.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year5"></span> StudEng Forum</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

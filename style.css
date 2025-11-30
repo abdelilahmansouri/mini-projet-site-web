@@ -1,0 +1,93 @@
+/* Mobile-first responsive stylesheet for StudEng Forum prototype */
+/* Variables */
+:root{
+  --bg: #ffffff;
+  --card: #f8f9fb;
+  --text: #222;
+  --muted: #666;
+  --accent: #0073e6;
+  --accent-2: #1b9b7a;
+  --danger: #c62828;
+  --radius: 12px;
+  --container: 1100px;
+}
+/* Dark theme */
+body.dark {
+  --bg: #0f1720;
+  --card: #0b1220;
+  --text: #e6eef6;
+  --muted: #9fb0c6;
+  --accent: #50a7ff;
+  --accent-2: #22d3aa;
+}
+/* Base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+/* Layout */
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.site-header{border-bottom:1px solid rgba(0,0,0,0.06);position:sticky;top:0;background:var(--bg);z-index:10}
+.logo{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.05rem}
+.nav{display:none}
+.controls{display:flex;gap:.5rem;align-items:center}
+/* Hero */
+.hero{padding:2rem 0;text-align:center}
+.hero h1{margin:.25rem 0 0.5rem;font-size:1.6rem}
+.hero p{color:var(--muted);margin:0 0 1rem}
+/* Buttons */
+.btn{
+  display:inline-block;padding:.6rem .9rem;border-radius:10px;background:var(--accent);color:white;text-decoration:none;border:none;cursor:pointer;font-weight:600;
+}
+.btn.outline{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.btn.small{padding:.35rem .6rem;font-size:.9rem;border-radius:8px}
+/* Features grid */
+.features{display:grid;grid-template-columns:1fr;gap:1rem;margin:1.2rem 0}
+.card{background:var(--card);padding:1rem;border-radius:10px;box-shadow:0 2px 6px rgba(2,6,23,0.04)}
+/* Threads */
+.thread-list{list-style:none;padding:0;margin:0}
+/* Form styles */
+.form-card{background:var(--card);padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.05)}
+.form-row{margin-bottom:.9rem}
+.form-row label{display:block;font-weight:600;margin-bottom:.35rem}
+.form-row input[type=text],
+.form-row input[type=email],
+.form-row input[type=password],
+.form-row input[type=number],
+.form-row input[type=file],
+.form-row textarea{
+  width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(0,0,0,0.08);background:white;color:var(--text);
+}
+body.dark .form-row input, body.dark .form-row textarea{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+.form-row.two-col{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
+/* errors */
+.error{color:var(--danger);font-size:.92rem;margin-top:.3rem;min-height:1.1em}
+.form-message{margin-top:1rem;padding:.6rem;border-radius:8px;display:none}
+.form-message.success{background:rgba(34,197,94,0.12);color:#064e3b;display:block}
+.form-message.error{background:rgba(242, 72, 72, 0.08);color:var(--danger);display:block}
+/* photo preview */
+.photo-preview{margin-top:.6rem;min-height:60px;display:flex;align-items:center;gap:.6rem}
+.photo-preview img{max-height:96px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)}
+/* team */
+.team-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+.team-card{text-align:center;padding:1rem;background:var(--card);border-radius:10px}
+.team-card img{border-radius:50%;width:120px;height:120px;object-fit:cover}
+/* footer */
+.site-footer{border-top:1px solid rgba(0,0,0,0.06);padding:1rem 0;margin-top:2rem;text-align:center;color:var(--muted)}
+/* utility */
+.meta-row{display:flex;justify-content:space-between;align-items:center}
+/* Responsive wide screens */
+@media(min-width:800px){
+  .nav{display:flex;gap:1rem}
+  .features{grid-template-columns:repeat(3,1fr)}
+  .team-grid{grid-template-columns:repeat(3,1fr)}
+  .hero h1{font-size:2rem}
+}
